@@ -1,3 +1,5 @@
+<h1 align="center">SynthQuestions</h1>
+
 This is the code repo for the paper **From Real to Synthetic: Synthesizing Millions of Diversified and Complicated User Instructions with Attributed Grounding**. 
 
 <p align="center">
