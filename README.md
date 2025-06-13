@@ -95,7 +95,7 @@ There are two optional operations that can be conducted. As we utilize off-the-s
 
 - We utilize [BERTopic](https://maartengr.github.io/BERTopic/index.html) to model the topic of instructions, and select instructions with the highest scores in each topic, maximizing the diversity of the dataset.
 
-- We utilize [LLaMA-Guard-3-8B](https://huggingface.co/meta-llama/Llama-Guard-3-8B) to moderate the instructions and find the potential risks.
+- We utilize 🤗 [LLaMA-Guard-3-8B](https://huggingface.co/meta-llama/Llama-Guard-3-8B) to moderate the instructions and find the potential risks.
 
 ## Citation
 
