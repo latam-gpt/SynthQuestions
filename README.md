@@ -1,5 +1,15 @@
 <h1 align="center">SynthQuestions</h1>
 
+<p align="center">
+    <a href="https://www.arxiv.org/abs/2506.03968">
+        <img src="https://img.shields.io/badge/arXiv-b31b1b.svg?style=for-the-badge&logo=arXiv&logoColor=white" alt="Paper on arXiv">
+    </a>
+    &nbsp;&nbsp;
+    <a href="https://huggingface.co/datasets/IgnoraZ/SynthQuestions">
+        <img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Repo-yellow.svg?style=for-the-badge" alt="Hugging Face Repo">
+    </a>
+</p>
+
 This is the code repo for the paper **From Real to Synthetic: Synthesizing Millions of Diversified and Complicated User Instructions with Attributed Grounding**. 
 
 <p align="center">
@@ -17,7 +27,7 @@ Starting with a high-quality seed dataset, we synthesize **Complicated**, **Dive
 
 ## Data and Models
 
-You can find all the data and checkpoints in the Huggingface Hub Collection  [SynthQuestions](https://huggingface.co/collections/IgnoraZ/synthquestions-6848f8f22e063cff5e55266e), which contains the following components:
+You can find all the data and checkpoints in the Huggingface Hub Collection 🤗 [SynthQuestions](https://huggingface.co/collections/IgnoraZ/synthquestions-6848f8f22e063cff5e55266e), which contains the following components:
 
 - 29K human instructions collected from several open-source datasets.
 - 1M instructions synthesized with our pipelines.
