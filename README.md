@@ -1,9 +1,9 @@
 <h1 align="center">SynthQuestions</h1>
 
 <p align="center">
-    <a href="https://www.arxiv.org/abs/2506.03968" style="text-decoration: none; border: none; outline: none; box-shadow: none;"><img src="https://img.shields.io/badge/arXiv-b31b1b.svg?style=for-the-badge&logo=arXiv&logoColor=white" alt="Paper on arXiv"></a>
+    <a href="https://www.arxiv.org/abs/2506.03968" target="_blank" style="text-decoration: none; border: none; outline: none; box-shadow: none;"><img src="https://img.shields.io/badge/arXiv-b31b1b.svg?style=for-the-badge&logo=arXiv&logoColor=white" alt="Paper on arXiv"></a>
     &nbsp;&nbsp;
-    <a href="https://huggingface.co/datasets/IgnoraZ/SynthQuestions" style="text-decoration: none; border: none; outline: none; box-shadow: none;"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Repo-yellow.svg?style=for-the-badge" alt="Hugging Face Repo"></a>
+    <a href="https://huggingface.co/datasets/IgnoraZ/SynthQuestions" target="_blank" style="text-decoration: none; border: none; outline: none; box-shadow: none;"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Repo-yellow.svg?style=for-the-badge" alt="Hugging Face Repo"></a>
 </p>
 
 This is the code repo for the paper **From Real to Synthetic: Synthesizing Millions of Diversified and Complicated User Instructions with Attributed Grounding**. 
