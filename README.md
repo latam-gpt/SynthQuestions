@@ -7,6 +7,7 @@
 </p>
 
 🎉🎉🎉**This work just got ACL 2025 Outstanding Paper Award**🎉🎉🎉
+
 This is the code repo for the paper **From Real to Synthetic: Synthesizing Millions of Diversified and Complicated User Instructions with Attributed Grounding**. 
 
 <p align="center">
