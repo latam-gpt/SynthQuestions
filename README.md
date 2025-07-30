@@ -6,6 +6,7 @@
     <a href="https://huggingface.co/datasets/IgnoraZ/SynthQuestions" target="_blank" style="text-decoration: none; border: none; outline: none; box-shadow: none;"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Repo-yellow.svg?style=for-the-badge" alt="Hugging Face Repo"></a>
 </p>
 
+🎉🎉🎉**This work just got ACL 2025 Outstanding Paper Award**🎉🎉🎉
 This is the code repo for the paper **From Real to Synthetic: Synthesizing Millions of Diversified and Complicated User Instructions with Attributed Grounding**. 
 
 <p align="center">
