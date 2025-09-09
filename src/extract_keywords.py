@@ -20,15 +20,14 @@ def run(data_tuple, output_path):
         max_retries, retries = 3, 0
         while retries < max_retries:
             retries += 1
-            try:
-                response = call_model(KEYWORD_SYSTEM, prompt)
-                response = extract_dictionary_from_string(response)
-                response_dict = json.loads(response)
-                item['keywords'] = response_dict['keywords']
+            response = call_model(KEYWORD_SYSTEM, prompt)
+            response = extract_dictionary_from_string(response)
+            response_dict = json.loads(response)
+            item['keywords'] = response_dict['keywords']
 
-            except Exception as e:
-                print(extract_dictionary_from_string(response))
-                print(f"{pid}>>>>>>>>>>{repr(e)}")
+            # except Exception as e:
+            #     print(extract_dictionary_from_string(response))
+            #     print(f"{pid}>>>>>>>>>>{repr(e)}")
         
         if 'keywords' not in item:
             continue
