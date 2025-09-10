@@ -1,6 +1,9 @@
 import json
 import re
+import torch
 from transformers import pipeline, AutoTokenizer
+
+MODEL_NAME = "Qwen/Qwen3-14B"
 
 def load_jsonl(file_path):
     data = []
@@ -11,13 +14,17 @@ def load_jsonl(file_path):
 
 
 def extract_dictionary_from_string(s):
-    # extract the strings between "```json" and "```"
-    pattern = r'```json(.*)```'
-    match = re.search(pattern, s)
-    if match:
-        return match.group(1).strip()
-    else:
-        return None
+    # extract the strings between "```json" and "```
+    dict_str = None
+    try:
+        dict_str = json.loads(s)
+        return json.dumps(dict_str)
+    except json.decoder.JSONDecodeError:
+        pattern = r'```json(.*)```'
+        match = re.search(pattern, s)
+        if match:
+            dict_str = match.group(1).strip()
+    return dict_str
 
 
 # Initialize the pipeline globally for efficiency
@@ -29,7 +36,8 @@ def _get_pipeline():
     if _pipeline is None:
         _pipeline = pipeline(
             "text-generation",
-            model="meta-llama/Llama-3.2-1B-Instruct",
+            model=MODEL_NAME,
+            torch_dtype=torch.bfloat16,
             trust_remote_code=True,
             device_map="auto"
         )
@@ -38,7 +46,7 @@ def _get_pipeline():
 def _get_tokenizer():
     global _tokenizer
     if _tokenizer is None:
-        _tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.2-1B-Instruct")
+        _tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     return _tokenizer
 
 def call_model(system_prompt, user_prompt):
@@ -56,7 +64,8 @@ def call_model(system_prompt, user_prompt):
     formatted_prompt = tokenizer.apply_chat_template(
         messages, 
         tokenize=False, 
-        add_generation_prompt=True
+        add_generation_prompt=True,
+        enable_thinking=False,
     )
     
     # Generate response using the pipeline
