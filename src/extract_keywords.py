@@ -5,7 +5,7 @@ import multiprocessing
 from tqdm import tqdm
 from functools import partial
 from utils import load_jsonl, call_model, extract_dictionary_from_string
-from prompts import KEYWORD_SYSTEM, KEYWORD_USER_TEMPLATE
+from es_prompts import KEYWORD_SYSTEM, KEYWORD_USER_TEMPLATE
 
 
 def run(data_tuple, output_path):
@@ -66,4 +66,4 @@ if __name__ == '__main__':
         partial_run = partial(run, output_path=args.output_path)
         results = pool.map(partial_run, splited_data)
 
-    print(f'>>>>>>>>>>>>finished {args.file}<<<<<<<<<<<<<')
+    print(f'>>>>>>>>>>>>finished {args.input_file}<<<<<<<<<<<<<')
